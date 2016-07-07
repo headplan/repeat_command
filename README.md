@@ -1,3 +1,3 @@
-# My Awesome Book
+# Repeat Command
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+这里记录所以需要重复重复再重复的命令,也作为简单复习的快捷方式.
