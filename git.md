@@ -28,6 +28,13 @@ git commit -m "readme file"
 **把多个文件添加到版本库**
 
 ```
-
+touch file1 file2 file3
+git add file1
+git add file2 file3
+git commit -m "add 3 files"
 ```
+
+
+
+
 
