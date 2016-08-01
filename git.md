@@ -86,3 +86,22 @@ rm file2
 git checkout -- file2 # 如果误删了文件,可以重新检出
 ```
 
+**远程仓库**
+
+```
+ssh-keygen -t rsa -C "headplan@163.com"
+github # 设置秘钥对文件名
+vim config
+Host github.com www.github.com
+    IdentityFile ~/.ssh/github
+# 进入 Account settings 设置公钥
+# 把本地仓库连接到远程仓库
+git remote add git-command git@github.com:headplan/git-command.git
+git push -u git-command master # 把本地库的所有内容推送到远程库,第一次使用-u参数
+git clone git@github.com:headplan/git-command.git # 从远程库克隆
+```
+
+
+
+
+
