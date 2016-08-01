@@ -79,6 +79,9 @@ git reset --hard HEAD^ # commit之后,可以回退到上一个版本
 **删除文件**
 
 ```
-
+rm file1
+git rm file1 # 从版本库中删除
+git commit -m "确认删除文件,这也是一次提交修改"
+git checkout -- file2
 ```
 
