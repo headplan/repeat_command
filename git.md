@@ -67,7 +67,18 @@ git diff HEAD -- README # 查看暂存区和版本库比较
 
 **撤销修改**
 
+```
+vim README # 修改内容
+git status
+git checkout -- README # 丢弃add之前的修改,重新检出文件
+git reset HEAD README # 撤销add的修改
+git checkout -- README # reset之后执行恢复最初的原样
+git reset --hard HEAD^ # commit之后,可以回退到上一个版本
+```
 
+**删除文件**
 
+```
 
+```
 
