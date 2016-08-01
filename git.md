@@ -101,7 +101,11 @@ git push -u git-command master # 把本地库的所有内容推送到远程库,�
 git clone git@github.com:headplan/git-command.git # 从远程库克隆
 ```
 
+**分支管理**
 
+**标签管理**
 
+**使用GitHub**
 
+**自定义Git**
 
