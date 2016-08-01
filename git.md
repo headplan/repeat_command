@@ -118,7 +118,26 @@ git branch -d dev # 删除分支
 
 **解决冲突**
 
-
+```
+git checkout -b dev
+vim README
+git add README
+git commit -m "修改了最后一行"
+git checkout master
+vim README
+git add README
+git commit -m "同样修改了最后一行"
+git merge dev
+# 提示合并冲突了Merge conflict
+vim README # 修改冲突
+git add README
+git commit -m "修改完冲突后提交"
+git log --graph --pretty=oneline --abbrev-commit # 展示精简log
+# --graph:冲突的提交
+# --pretty=oneline:只显示一行
+# --abbrev-commit:显示短的提交标识
+git branch -d dev # 删除分支
+```
 
 **标签管理**
 
