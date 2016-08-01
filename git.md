@@ -104,8 +104,21 @@ git clone git@github.com:headplan/git-command.git # 从远程库克隆
 **分支管理**
 
 ```
-
+git branch # 查看分支
+git branch dev # 创建分支
+git checkout dev # 切换分支
+git checkout -b dev # 创建并切换到分支
+touch file4
+git add file4
+git commit -m "添加file4文件"
+git checkout master
+git merge dev # 合并某分支到当前分支,Fast-forward表示没有冲突快速合并
+git branch -d dev # 删除分支
 ```
+
+**解决冲突**
+
+
 
 **标签管理**
 
