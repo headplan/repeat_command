@@ -59,6 +59,15 @@ git reflog # 查看所有分支的commit和reset记录
 **管理修改**
 
 ```
-
+vim README # 修改内容
+git diff README # 查看本身和缓冲区的不同
+git add README
+git diff HEAD -- README # 查看暂存区和版本库比较
 ```
+
+**撤销修改**
+
+
+
+
 
