@@ -54,11 +54,7 @@ git reset --hard 4d20cfd # 使用版本号前8位
 git reflog # 查看所有分支的commit和reset记录
 ```
 
-
-
-
-
-
+**工作区-&gt;暂存区-&gt;版本库**
 
 
 
