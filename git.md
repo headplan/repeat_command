@@ -37,6 +37,16 @@ git commit -m "add 3 files"
 **时光机穿梭**
 
 ```
+vim README
+git status # 随时查看工作区的状态
+git diff README
+git add README
+git commit -m "add distributed"
+```
+
+**版本回退**
+
+```
 
 ```
 
