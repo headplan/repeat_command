@@ -47,6 +47,18 @@ git commit -m "add distributed"
 **版本回退**
 
 ```
-
+git log
+git log --pretty=oneline # 只显示版本号和提交时的描述
+git reset --hard HEAD^ # HEAD^^表示上上个版本,HEAD~10上10个版本
+git reset --hard 4d20cfd # 使用版本号前8位
+git reflog # 查看所有分支的commit和reset记录
 ```
+
+
+
+
+
+
+
+
 
