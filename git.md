@@ -139,6 +139,10 @@ git log --graph --pretty=oneline --abbrev-commit # 展示精简log
 git branch -d dev # 删除分支
 ```
 
+**分支策略**
+
+
+
 **标签管理**
 
 **使用GitHub**
