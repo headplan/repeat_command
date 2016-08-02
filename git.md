@@ -233,11 +233,11 @@ git push git-command dev # 提交到远程仓库
 
 
 注意:
-git pull 时 , 提示 “no tracking information” , 则说明本地分支和远程分支的链接关系没有创建 , 用命令 ,
+git pull 时 , 提示 “no tracking information” , 则说明本地分支和远程分支的链接关系没有创建 , 用命令:
 
- git branch —set-upstream branch-name origin\/branch-name
+`git branch —set-upstream branch-name origin/branch-name`
 
- 创建链接关系 .
+创建链接关系 .
 
 **标签管理**
 
