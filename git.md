@@ -153,9 +153,32 @@ git log --graph --pretty=oneline --abbrev=commit
 
 ![](/assets/分支策略.png)
 
+**Bug分支**
+
+```
+git checkout dev
+vim README # 还没提交的内容
+git add README
+vim README # 还没提交并且不add的内容
+git stash # 储藏工作现场
+git checkout -b issue-102 # 开始创建临时BUG分支,修改BUG
+touch bugfile
+git add bugfile
+git commit -m "issue-102"
+git checkout dev
+git merge --no-ff -m "合并修复的bug" issue-102
+git branch -d issue-102
+git stash list # 查看一下储藏的列表
+git stash apply # 恢复刚才储藏的内容
+git stash drop # 删除刚才的储藏
+git stash pop # 等于上面两次操作
+git stash list # 查看{0}编号
+git stash apply stash@{0} # 恢复指定的储藏
+```
+
+**Feature分支**
+
 **标签管理**
-
-
 
 **使用GitHub**
 
