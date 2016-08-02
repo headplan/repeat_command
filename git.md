@@ -176,7 +176,22 @@ git stash list # 查看{0}编号
 git stash apply stash@{0} # 恢复指定的储藏
 ```
 
-**Feature分支**
+**Feature分支\(新功能分支\)**
+
+```
+git checkout -b feature-headplan
+touch headplan.py
+git add headplan.py
+git commit -m "headplan功能"
+git checkout dev # 切换到dev分支,准备合并
+git branch -d feature-headplan # 得到通知,不用合并直接删除此功能
+# 上面会提示因为没合并,无法删除.可以使用-D强制删除
+git branch -D feature-headplan
+```
+
+**多人协作**
+
+
 
 **标签管理**
 
