@@ -294,7 +294,7 @@ git config --global alias.ci commit = git ci
 git config --global alias.br branch = git br
 git config --global alias.unstage 'reset HEAD' = git unstage
 git config --global alias.last 'log -1' = git last
+# 使用git lg查看效果
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit" 
 ```
-
-
 
