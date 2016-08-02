@@ -148,9 +148,25 @@ git add README
 git commit -m "修改了分支的README"
 git checkout master
 git merge --no-ff -m "记录合并提交,禁用快速合并" dev
+git log --graph --pretty=oneline --abbrev=commit
 ```
 
-**标签管理1**
+**标签管理**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 **使用GitHub**
 
