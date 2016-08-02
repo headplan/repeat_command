@@ -221,7 +221,23 @@ git commit -m "提交"
 git push git-command dev # 提交到远程仓库
 ```
 
+多人协作工作模式:
 
+1. 首先 , git push origin branch-name 推送自己的修改 ;
+
+2. 推送失败 , 说明远程仓库分支比较新 , 需要先 git pull 合并 ;
+
+3. 如果合并有冲突 , 解决冲突 , 然后提交本地 ;
+
+4. 没冲突 , 或者解决冲突之后 , 再用 git push origin branch-name 推送即成功 .
+
+
+注意:
+git pull 时 , 提示 “no tracking information” , 则说明本地分支和远程分支的链接关系没有创建 , 用命令 ,
+
+ git branch —set-upstream branch-name origin\/branch-name
+
+ 创建链接关系 .
 
 **标签管理**
 
