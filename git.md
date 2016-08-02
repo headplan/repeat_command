@@ -281,5 +281,7 @@ touch ~/.gitignore_global
 # 在~/.gitconfig中引入
 [core]
     excludesfile=/Users/headplan/.gitignore_global
+git add -f file # 如果文件被过滤了,可以强行添加文件
+
 ```
 
