@@ -273,6 +273,13 @@ git clone git@github.com:headplan/bootstrap.git
 **自定义Git**
 
 ```
-
+git config --global user.name "Your Name"
+git config --global user.email "headplan@163.com"
+git config --global color.ui true # 配置显示颜色
+# 创建全局忽略文件
+touch ~/.gitignore_global
+# 在~/.gitconfig中引入
+[core]
+    excludesfile=/Users/headplan/.gitignore_global
 ```
 
