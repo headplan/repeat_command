@@ -283,6 +283,7 @@ touch ~/.gitignore_global
     excludesfile=/Users/headplan/.gitignore_global
 git add -f file # 如果文件被过滤了,可以强行添加文件
 git check-ignore -v file # 查看哪些规则有问题
-
 ```
+
+
 
