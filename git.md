@@ -285,5 +285,16 @@ git add -f file # 如果文件被过滤了,可以强行添加文件
 git check-ignore -v file # 查看哪些规则有问题
 ```
 
+**配置别名**
+
+```
+git config --global alias.st status = git st
+git config --global alias.co checkout = git co
+git config --global alias.ci commit = git ci
+git config --global alias.br branch = git br
+git config --global alias.unstage 'reset HEAD' = git unstage
+git config --global alias.last 'log -1' = git last
+```
+
 
 
