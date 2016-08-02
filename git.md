@@ -242,7 +242,20 @@ git pull 时 , 提示 “no tracking information” , 则说明本地分支和�
 **标签管理**
 
 ```
-
+git checkout master
+git tag v1.0
+git tag # 查看所有标签
+git log --pretty=oneline --abbrev-commit
+git tag v0.9 358e479 # 直接写明commit id打标签
+git show v0.9 # 查看标签信息
+git tag -a v0.1 -m "创建指定签名标签" 7bc84a8
+git tag -s v0.2 -m "创建私钥签名标签" 3c3c9ac # 必须先安装gpg
+git tag -d v0.1 # 删除一个标签
+git push git-command v1.0 # 推送指定标签
+git push git-command --tags # 推送所有标签
+# 如果要删除已经推送到远程仓库的标签,先删除本地,再推送
+git tag -d v0.9
+git push git-command :refs/tags/v0.9
 ```
 
 **使用GitHub**
