@@ -142,7 +142,12 @@ git branch -d dev # 删除分支
 **分支策略**
 
 ```
-git checkout -b devvim READMEgit add READMEgit commit -m "修改了分支的README"git checkout mastergit merge --no-ff -m "记录合并提交,禁用快速合并" dev
+git checkout -b dev
+vim README
+git add README
+git commit -m "修改了分支的README"
+git checkout master
+git merge --no-ff -m "记录合并提交,禁用快速合并" dev
 ```
 
 **标签管理1**
