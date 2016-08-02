@@ -189,11 +189,39 @@ git branch -d feature-headplan # 得到通知,不用合并直接删除此功能
 git branch -D feature-headplan
 ```
 
-**多人协作**
+**多人协作抓取分支**
 
 ```
-afsdafdasdfsadf
+git remote -v # 加-v更详细,显示抓取和推送的远程库信息
+cd ..
+mkdir test2
+git clone git@github.com:headplan/git-command.git test2
+git branch # 查看分支,但只有master
+# 想着dev分支上开发,必须先在本地创建
+git remote -v # 查看仓库名
+git checkout -b dev origin/dev
+git branch # 现在就能查看到dev分支了
+vim README
+git add README
+git commit -m "新添加内容"
+git push origin dev
+cd test # 切换到test目录
+git checkout dev
+vim README # 修改相同的文件
+git add README
+git commit -m "冲突信息"
+git push git-command dev # 报错有冲突
+git pull # 此时可以使用pull先把远程的修改抓下来
+# 但是pull依然报错,说明本地dev和远程的没有链接
+git branch --set-upstream dev git-command/dev
+git pull # 重新pull,然后看看是否有冲突,修改一下
+vim README
+git add README
+git commit -m "提交"
+git push git-command dev # 提交到远程仓库
 ```
+
+
 
 **标签管理**
 
