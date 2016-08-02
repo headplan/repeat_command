@@ -151,20 +151,7 @@ git merge --no-ff -m "记录合并提交,禁用快速合并" dev
 git log --graph --pretty=oneline --abbrev=commit
 ```
 
-**标签管理**
-
-
-
-
-
-
-
-
-
-
-
-
-
+![](/assets/QQ20160802-0@2x.png)**标签管理**
 
 
 
