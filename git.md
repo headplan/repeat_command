@@ -268,7 +268,7 @@ git push git-command :refs/tags/v0.9
 git clone git@github.com:headplan/bootstrap.git
 ```
 
-如果想修复bug或者新增功能,可以先
+如果想修复bug或者新增功能,可以先推送到自己的仓库里,然后向官方发起一个pull request.
 
 **自定义Git**
 
