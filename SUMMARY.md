@@ -1,8 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* [redis](Redis.md)
+* [Redis](redis.md)
 * [Git](git.md)
-  * [GitExt](gitext.md)
-
+    * [GitExt](gitext.md)
 
