@@ -85,3 +85,9 @@ CREATE TABLE test (
 );
 ```
 
+**删除数据表**
+
+```
+DROP TABLE test;
+```
+
