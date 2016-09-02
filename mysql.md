@@ -55,6 +55,20 @@ SHOW TABLE STATUS FROM 数据库 LIKE 'emr_%'; # 表名emr_开头的
 **创建数据库**
 
 ```
+mysqladmin -u root -p create test1 # 创建数据库
+CREATE DATABASE test # 创建数据库
+```
+
+**删除数据库**
+
+```
+mysqladmin -u root -p drop test1
+DROP DATABASE test # 删除数据库
+```
+
+**选择数据库**
+
+```
 
 ```
 
