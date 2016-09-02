@@ -52,5 +52,9 @@ SHOW TABLE STATUS FROM 数据库 LIKE 'emr_%'; # 表名emr_开头的
 # \G按列打印
 ```
 
+**创建数据库**
 
+```
+
+```
 
