@@ -91,3 +91,13 @@ CREATE TABLE test (
 DROP TABLE test;
 ```
 
+插入数据
+
+
+
+查询数据
+
+
+
+
+
