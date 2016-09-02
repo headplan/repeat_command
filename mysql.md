@@ -72,5 +72,16 @@ DROP DATABASE test # 删除数据库
 use mysql; # 选择数据库
 ```
 
+**创建数据表**
 
+```
+use test;
+CREATE TABLE test (
+    ->id INT NOT NULL AUTO_INCREMENT,
+    ->title VARCHAR(100) NOT NULL,
+    ->author VARACHAR(40) NOT NULL,
+    ->date DATE,
+    ->PRIMARY KEY(id)
+);
+```
 
