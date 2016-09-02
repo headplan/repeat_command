@@ -28,7 +28,7 @@ SELECT host,user,password FROM user WHERE user='test';
 
 > 注意:MySQL5.7中表user表的password换成**authentication\_string.**
 > 
->  select\_priv,insert\_priv,update\_priv为用户的权限.
+> select\_priv,insert\_priv,update\_priv为用户的权限.
 
 ```
 GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP
@@ -37,7 +37,9 @@ GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP
 ->IDENTIFIED BY 'guest';
 ```
 
-**配置文件\/etc\/my.cnf**
+**管理命令**
 
+```
 
+```
 
