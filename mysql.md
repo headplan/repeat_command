@@ -69,6 +69,8 @@ DROP DATABASE test # 删除数据库
 **选择数据库**
 
 ```
-
+use mysql; # 选择数据库
 ```
+
+
 
