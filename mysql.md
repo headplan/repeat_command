@@ -45,9 +45,11 @@ SHOW DATABASES; # 显示数据库列表
 SHOW TABLES; # 显示数据表列表
 SHOW COLUMNS FROM 数据表; # 显示字段属性默认值等
 SHOW INDEX FROM 数据表; # 显示数据表的详细索引信息,包括主键
-SHOW TABLE STATUS LIKE [FROM db_name][LIKE 'pattern']\G;
+SHOW TABLE STATUS FROM db_name [LIKE 'pattern']\G;
 # 输出MySQL数据库管理系统的性能及统计信息
-
+SHOW TABLE STATUS FROM 数据库; # 显示所有表信息
+SHOW TABLE STATUS FROM 数据库 LIKE 'emr_%'; # 表名emr_开头的
+# \G按列打印
 ```
 
 
