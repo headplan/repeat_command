@@ -40,6 +40,15 @@ GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP
 **管理命令**
 
 ```
+use 数据库名; # 切换数据库
+SHOW DATABASES; # 显示数据库列表
+SHOW TABLES; # 显示数据表列表
+SHOW COLUMNS FROM 数据表; # 显示字段属性默认值等
+SHOW INDEX FROM 数据表; # 显示数据表的详细索引信息,包括主键
+SHOW TABLE STATUS LIKE [FROM db_name][LIKE 'pattern']\G;
+# 输出MySQL数据库管理系统的性能及统计信息
 
 ```
+
+
 
