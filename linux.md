@@ -24,6 +24,7 @@ whereis  命令只能用于搜索程序名,而且只搜索二进制文件(参数
 type COMMAND  查看命令类型
 
 Ctrl+c 取消命令执行
+pwd    打印工作路径print work dir
 ```
 
 
