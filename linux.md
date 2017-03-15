@@ -13,7 +13,8 @@ tty         查看当前终端设备
 
 echo ${SHELL}    显示当前使用shell
 cat /etc/shells  显示当前系统使用的所有shell
-echo ${PS1}      查看环境变量显示
+echo ${PS1}      打印变量
+echo ${PATH}     查看环境变量
 # 管理员
 $ 普通用户
 
@@ -27,5 +28,5 @@ Ctrl+c 取消命令执行
 pwd    打印工作路径print work dir
 ```
 
-
+**帮助命令**
 
