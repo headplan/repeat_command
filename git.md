@@ -231,8 +231,7 @@ git push git-command dev # 提交到远程仓库
 
 4. 没冲突 , 或者解决冲突之后 , 再用 git push origin branch-name 推送即成功 .
 
-
-注意:
+注意:  
 git pull 时 , 提示 “no tracking information” , 则说明本地分支和远程分支的链接关系没有创建 , 用命令:
 
 `git branch —set-upstream branch-name origin/branch-name`
@@ -295,6 +294,8 @@ git config --global alias.br branch = git br
 git config --global alias.unstage 'reset HEAD' = git unstage
 git config --global alias.last 'log -1' = git last
 # 使用git lg查看效果
-git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit" 
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 ```
+
+
 
