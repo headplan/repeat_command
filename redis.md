@@ -40,6 +40,48 @@ strlen akey
 setrange t.msg 1 "appy" # 只接受正索引,覆盖内容
 getrange t.msg 0 4
 getrange t.msg -5 -1
+
+# 数字增减
+incrby num 5 # 加5
+decrby num 2 # 减2
+incr num # 加1
+decr num # 减1
+
+set float 1.11
+incrbyfloat float 3.14
+incrbyfloat float -0.25
+
+# 二进制数据设置和获取
+# python
+import redis
+r = redis.Redis()
+r.set('bits', 0b10010100)
+bin(int(r.get('bits')))
+r.append('bits', 0b111)
+bin(int(r.get('bits')))
+
+# php
+$r = new Redis();
+$r->connect('127.0.0.1', 6379);
+$r->ping();
+$r->set('bits2', 0b10010100);
+decbin($r->get('bits2'));
+$r->append('bits2', 0b111);
+decbin($r->get('bits2'));
+
+# 设置和获取二进制位的值
+setbit bit 0 1
+setbit bit 2 1
+getbit bit 2
+bincount bit 2 1 # 计算二进制值为1的位的数量
+
+# 二进制位运算
+set b1 为01001101
+set b2 为10110101
+BITOP AND b1-and-b2 b1 b2 # b1-and-b2 = 00000101
+BITOP OR b1-or-b2 b1 b2 # b1-or-b2 = 11111101
+BITOP XOR b1-xor-b2 b1 b2 # b1-xor-b2 = 11111000
+BITOP NOT not-b1 b1 # not-b1 = 10110010
 ```
 
 散列
