@@ -82,6 +82,9 @@ BITOP AND b1-and-b2 b1 b2 # b1-and-b2 = 00000101
 BITOP OR b1-or-b2 b1 b2 # b1-or-b2 = 11111101
 BITOP XOR b1-xor-b2 b1 b2 # b1-xor-b2 = 11111000
 BITOP NOT not-b1 b1 # not-b1 = 10110010
+
+# 客户端显示中文
+redis-cli --raw
 ```
 
 散列
