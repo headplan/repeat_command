@@ -87,7 +87,41 @@ BITOP NOT not-b1 b1 # not-b1 = 10110010
 redis-cli --raw
 ```
 
-散列
+**散列**
+
+```
+# 设置关联域值对
+hset message "id" 10086
+hset message "name" "kony"
+hset message "email" "abc@abc.com"
+
+# 获取域关联的值
+hget message "id"
+hget message "name"
+hget message "email"
+
+# 仅当域不存在时设置关联域值对
+hsetnx message "age" 18
+
+# 检查域是否存在
+hexists message "age"
+
+# 删除给定域值对
+hdel message "email"
+
+# 获取散列包含的键值对数量
+hlen message
+
+# 批量操作
+# 设置获取散列中多个域值对
+hmset message2 "id" 10086 "name" "kony" "email" "abc@abc.com"
+hmget message2 "id" "name" "email"
+
+# 获取所有
+hkeys message # 获取所有域
+hvals message # 获取所有值
+hgetall message # 获取所有域值对
+```
 
 列表
 
