@@ -121,11 +121,53 @@ hmget message2 "id" "name" "email"
 hkeys message # 获取所有域
 hvals message # 获取所有值
 hgetall message # 获取所有域值对
+
+# 数字操作
+hincrby message age 1
+hincrby message age -2
+hset message height 183.5
+hincrbyfloat message hight 2.5
+hincrbyfloat message hight -1.2
 ```
 
-列表
+**列表**
+
+```
+# 从列表的左右推入弹出的操作
+lpush list "php"
+lpush list "C"
+lpush list "Linxu" "Lua" # 推入多个
+rpush list "JS"
+rpush list "Python" "Rubyf"
+lpop list
+rpop list
+
+# 长度,索引和范围操作
+llen list
+lindex list 2
+lindex list -3
+lrange list 0 2
+lrange list -3 -1
+
+# 插入和删除数据
+lset list 0 "Linux_c" # 修改数据
+lindex list 0
+lset list -1 "Python_c"
+lindex list -1
+linsert list before "php" "before_php" # 插入数据
+linsert list after "php" "after_php"
+rpush list C
+rpush list C
+rpush list C
+lrem list 1 "C" # 从左删除1个C
+lrem list -2 "C" # 从右删除1个C
+lrem list 0 "C" # 删除所有C
+ltrim list 1 3 # 裁剪list,trim掉不在(1,3)范围的其他内容
+```
 
 集合
 
 有序集合
+
+
 
