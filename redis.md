@@ -252,5 +252,20 @@ pfmerge hll-all hll hll2 # 合并多个HyperLogLog
 pfcount hll-all
 ```
 
+---
+
+#### 处理数据库中的单个键
+
+```
+type msg # 查看类型
+type list
+del hll2 # 删除键
+del test abc
+exists wtf # 检查键是否存在
+exists hll
+rename msg msg2 # 键改名,msg必须存在,msg2存在则覆盖
+rename msg msg2 # 键改名,msg必须存在,msg2存在则不变,不存在才改名
+```
+
 
 
