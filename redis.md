@@ -231,6 +231,14 @@ zcount fp 1.0 3.5 # 计算给定分值范围内的元素数量
 
 zremrangebyrank fp 0 1 # 删除索引范围元素
 zremrangebyscore fp 3.9 7.0 # 删除分值范围元素
+
+# 集合运算操作
+zadd fruits-8-13 300 "apple" 200 "banana" 150 "cherry" # 8 月 13 日水果销量
+zadd fruits-8-14 250 "apple" 300 "banana" 100 "orange" # 8 月 14 日水果销量
+zunionstore fruits-8-13&14 2 fruits-8-13 fruits-8-14 # 计算两天水果的总销量
+zrange fruits-8-13&14 0 -1 WITHSCORES # 查看集合
+zinterstore fruits-8-13&14-pop 2 fruits-8-13 fruits-8-14 # 计算两天畅销的水果
+zrange fruits-8-13&14-pop 0 -1 WITHSCORES # 查看集合
 ```
 
 
