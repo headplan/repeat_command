@@ -198,5 +198,40 @@ sunionstore myunion number1 number2 # 计算并集并存储在myunion中
 
 #### **有序集合**
 
+```
+# 集合操作
+zadd fruits-price 3.2 "香蕉" # 添加元素
+zadd fruits-price 2.0 "西瓜"
+zadd fruits-price 4.0 "石榴" 7.0 "梨" 6.8 "芒果"
+
+zrem fruits-price "香蕉" "西瓜" # 删除元素
+
+zadd fp 3.2 "香蕉" 2.0 "西瓜" 4.0 "石榴" 7.0 "梨" 6.8 "芒果"
+zscore fp "芒果" # 返回关联分值
+zincrby fp 1.5 "西瓜" # 增加或减少分值
+zincrby fp -0.8 "芒果"
+zcard fp # 返回元素数量
+zrank fp "西瓜" # 返回西瓜的正排名,这里排1,从0开始
+zrevrank fp "西瓜" # 返回西瓜的反排名,这里排名3,也是从0开始,只不过是反着的.
+
+# 分值范围操作
+zrange fp 0 2 # 返回索引升序元素
+zrange fp 0 2 withscores # 返回索引升序元素,带分值
+zrevrange fp 0 2 # 返回索引降序元素
+zrevrange fp 0 2 withscores # 返回索引降序元素,带分值
+
+zrangebyscore fp 1.0 5.0 # 返回分值升序元素
+zrangebyscore fp 1.0 5.0 withscores # 返回分值升序元素,带分值
+zrangebyscore fp 1.0 5.0 withscores limit 1 3 # 返回分值升序元素,带分值,这里的limit和mysql中的一样
+zrevrangebyscore fp 1.0 5.0 # 返回分值降序元素
+zrevrangebyscore fp 1.0 5.0 withscores # 返回分值降序元素,带分值
+zrevrangebyscore fp 1.0 5.0 withscores limit 1 3 # 返回分值降序元素,带分值,这里的limit和mysql中的一样
+
+zcount fp 1.0 3.5 # 计算给定分值范围内的元素数量
+
+zremrangebyrank fp 0 1 # 删除索引范围元素
+zremrangebyscore fp 3.9 7.0 # 删除分值范围元素
+```
+
 
 
