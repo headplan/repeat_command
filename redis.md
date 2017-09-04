@@ -163,11 +163,14 @@ lrem list 1 "C" # 从左删除1个C
 lrem list -2 "C" # 从右删除1个C
 lrem list 0 "C" # 删除所有C
 ltrim list 1 3 # 裁剪list,trim掉不在(1,3)范围的其他内容
+
+# 阻塞弹出
+blpop/brpop empty-1 empty-2 10 # 都是空的list,阻塞10秒
+blpop/brpop empty-1 empty-2 list 10 # 哪里有值哪里弹出
+blpop/brpop empty-1 empty-2 20 # 另开一个客户端,push到list中值,马上停止并弹出(20秒之内)
 ```
 
 集合
 
 有序集合
-
-
 
