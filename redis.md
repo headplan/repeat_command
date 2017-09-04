@@ -241,5 +241,16 @@ zinterstore fruits-8-13&14-pop 2 fruits-8-13 fruits-8-14 # 计算两天畅销的
 zrange fruits-8-13&14-pop 0 -1 WITHSCORES # 查看集合
 ```
 
+#### HyperLogLog
+
+```
+pfadd hll a b c d e f g # 添加元素
+pfadd hll2 1 2 3 4 5 6 7
+pfcount hll # 统计返回估算值
+pfcount hll hll2 # 统计返回估算值
+pfmerge hll-all hll hll2 # 合并多个HyperLogLog
+pfcount hll-all
+```
+
 
 
