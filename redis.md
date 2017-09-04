@@ -1,6 +1,6 @@
 # Redis
 
-**字符串**
+#### **字符串**
 
 ```
 # 为字符串设置键值
@@ -87,7 +87,7 @@ BITOP NOT not-b1 b1 # not-b1 = 10110010
 redis-cli --raw
 ```
 
-**散列**
+#### **散列**
 
 ```
 # 设置关联域值对
@@ -130,7 +130,7 @@ hincrbyfloat message hight 2.5
 hincrbyfloat message hight -1.2
 ```
 
-**列表**
+#### **列表**
 
 ```
 # 从列表的左右推入弹出的操作
@@ -170,7 +170,33 @@ blpop/brpop empty-1 empty-2 list 10 # 哪里有值哪里弹出
 blpop/brpop empty-1 empty-2 20 # 另开一个客户端,push到list中值,马上停止并弹出(20秒之内)
 ```
 
-集合
+#### **集合**
 
-有序集合
+```
+# 集合操作
+sadd friends "小明" "小红" "小花" # 添加
+srem friends "小花" # 移除
+sismember friends "小花" # 检查是否存在
+scard friends # 统计个数
+smembers friends # 返回所有元素
+spop friends # 随机弹出一个元素
+SADD friends "peter" "jack" "tom" "john" "may"
+SRANDMEMBER friends # 随机的返回一个元素
+SRANDMEMBER friends 3 # 随机的返回三个无重复的元素,最多返回元素总数
+SRANDMEMBER friends -3 # 随机的返回三个可能有重复的元素,最多返回指定个数,所以会有很多重复的.
+
+# 集合运算操作
+sadd number1 "123" "456" "789"
+sadd number2 "123" "456" "999"
+sdiff number1 number2 # 计算差集
+sdiffstore mydiff number1 number2 # 计算差集并存储在mydiff中
+sinter number1 number2 # 计算交集
+sinterstore myinter mumber1 number2 # 计算交集并存储在myinter中
+sunion number1 number2 # 计算并集
+sunionstore myunion number1 number2 # 计算并集并存储在myunion中
+```
+
+#### **有序集合**
+
+
 
