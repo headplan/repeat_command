@@ -267,5 +267,18 @@ rename msg msg2 # 键改名,msg必须存在,msg2存在则覆盖
 rename msg msg2 # 键改名,msg必须存在,msg2存在则不变,不存在才改名
 ```
 
+#### 键过期
+
+```
+# 键生存时间
+set msg "hello world"
+expire msg 5
+exists msg
+
+set num 10086
+pexpire num 5500
+exists num
+```
+
 
 
