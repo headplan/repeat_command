@@ -278,6 +278,32 @@ exists msg
 set num 10086
 pexpire num 5500
 exists num
+
+# 键过期时间
+set msg "time to go"
+time # 查看当前的时间戳
+expireat msg 1000000005
+exists msg
+
+set num 10086
+time # 查看当前的时间戳
+pexpireat num 1000000005500
+exists num
+
+# 查看剩余的生存时间
+set msg "hello" ex 100 px 1000 # ex参数后面是生存时间秒,px是毫秒
+ttl msg
+pttl msg # 设置的为秒,显示的也是毫秒.
+time
+expireat msg 1000000005
+ttl msg
+pttl msg # 查看的也是生存时间
+
+# 移除键的过期时间或生存时间
+set msg "hi" ex 11001010
+ttl msg
+persist msg
+ttl msg
 ```
 
 
