@@ -264,7 +264,7 @@ del test abc
 exists wtf # 检查键是否存在
 exists hll
 rename msg msg2 # 键改名,msg必须存在,msg2存在则覆盖
-rename msg msg2 # 键改名,msg必须存在,msg2存在则不变,不存在才改名
+renamenx msg msg2 # 键改名,msg必须存在,msg2存在则不变,不存在才改名
 ```
 
 #### 键过期
